@@ -1,5 +1,4 @@
 import debounce from "lodash/debounce";
-import get from "lodash/get";
 import getRating from "./api/getRating";
 
 function initializeScript() {
@@ -31,7 +30,7 @@ function appendRatings() {
 
 async function appendRating(element) {
   element.parentElement.style.position = "relative";
-  const wineName = get(element.querySelector("h3"), "innerText");
+  const wineName = element.querySelector("h3").innerText;
 
   if (!wineName) {
     return;
