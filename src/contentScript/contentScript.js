@@ -17,9 +17,7 @@ function initializeScript() {
 }
 
 function appendRatings() {
-  const wineListItems = document.querySelectorAll(
-    'a[href*="/vin"]:not(.navbar-level-1-link)'
-  );
+  const wineListItems = document.querySelectorAll('a[href^="/produkt/vin"]');
 
   wineListItems.forEach((item) => {
     if (!item.parentNode.style.position) {
